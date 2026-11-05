@@ -4,6 +4,7 @@
   "description": "A dark theme coloured like the ocean when green beats blue.",
   "version": "0.1.0",
   "publisher": "emerald-ocean",
+  "icon": "images/icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
