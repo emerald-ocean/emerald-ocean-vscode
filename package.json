@@ -1,0 +1,38 @@
+{
+  "name": "emerald-ocean",
+  "displayName": "Emerald Ocean",
+  "description": "A dark theme coloured like the ocean when green beats blue.",
+  "version": "0.1.0",
+  "publisher": "emerald-ocean",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emerald-ocean/emerald-ocean-vscode"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "dark",
+    "green",
+    "emerald",
+    "ocean",
+    "theme"
+  ],
+  "galleryBanner": {
+    "color": "#01130b",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Emerald Ocean",
+        "uiTheme": "vs-dark",
+        "path": "./themes/emerald-ocean-color-theme.json"
+      }
+    ]
+  }
+}
