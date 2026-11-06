@@ -1,0 +1,63 @@
+name: Palette sync
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palette-sync
+
+env:
+  GO_VERSION: 1.27.3
+  GENERATED: themes/emerald-ocean-color-theme.json
+  BRANCH: palette-sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
+      - name: Open or update the palette sync PR
+        run: |
+          set -euo pipefail
+          latest=$(gh release view --repo emerald-ocean/palette --json tagName --jq .tagName)
+          current=$(make -s palette-version)
+          if [ "$latest" = "$current" ]; then
+            echo "Palette $current is the latest release"
+            exit 0
+          fi
+
+          make generate
+          cp "$GENERATED" "$RUNNER_TEMP/before"
+          make update-palette VERSION="$latest"
+          if cmp -s "$GENERATED" "$RUNNER_TEMP/before"; then type=chore; else type=feat; fi
+          title="$type: update palette to $latest"
+
+          gh auth setup-git
+          git switch -c "$BRANCH"
+          git -c user.name="github-actions[bot]" \
+            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit --all --message "$title"
+          git push --force origin "$BRANCH"
+
+          body="Updates emerald-ocean/palette from $current to $latest. Release notes: https://github.com/emerald-ocean/palette/releases/tag/$latest"
+          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --title "$title" --body "$body"
+          else
+            gh pr create --head "$BRANCH" --base main --title "$title" --body "$body"
+          fi

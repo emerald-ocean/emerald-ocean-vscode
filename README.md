@@ -26,9 +26,12 @@ The theme in `themes/` is generated at build time from `templates/` with the col
 ```sh
 make generate      # generate themes/emerald-ocean-color-theme.json
 make lint package  # validate and build dist/emerald-ocean-<version>.vsix
+make update-palette VERSION=vX.Y.Z  # move to a new palette release
 ```
 
 CI runs the same targets and keeps the packaged `.vsix` as a build artifact.
+
+The `Palette sync` workflow checks daily (or on demand from the Actions tab) for a new palette release and opens a PR that bumps the version: `feat:` when the generated colours changed, `chore:` when they did not.
 
 ## Releases
 
