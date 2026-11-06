@@ -6,10 +6,11 @@ The colours come from [emerald-ocean/palette](https://github.com/emerald-ocean/p
 
 ## Install
 
-From a packaged extension:
+From a packaged extension (requires Node.js):
 
 ```sh
-code --install-extension emerald-ocean-0.1.0.vsix
+make package
+code --install-extension dist/emerald-ocean-0.1.0.vsix
 ```
 
 Then pick **Emerald Ocean** under *Preferences: Color Theme*.
