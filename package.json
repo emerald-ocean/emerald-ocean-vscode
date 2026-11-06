@@ -35,5 +35,8 @@
         "path": "./themes/emerald-ocean-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.1.0"
   }
 }
