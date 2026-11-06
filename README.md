@@ -30,6 +30,10 @@ make lint package  # validate and build dist/emerald-ocean-<version>.vsix
 
 CI runs the same targets and keeps the packaged `.vsix` as a build artifact.
 
+## Releases
+
+Releases are automated with [release-please](https://github.com/googleapis/release-please). Every push to `main` updates a release PR with the next version, worked out from the conventional commit messages, and the matching version in `package.json` and `package-lock.json`. Merging that PR tags `vX.Y.Z` and publishes a GitHub Release with the notes.
+
 ## Icon
 
 The icon is derived from ["Vortex" by Matt Hardy](https://unsplash.com/photos/zJ-Cj3nT6EU) on Unsplash, used under the Unsplash License.
