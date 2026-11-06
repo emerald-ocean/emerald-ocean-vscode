@@ -32,7 +32,7 @@ CI runs the same targets and keeps the packaged `.vsix` as a build artifact.
 
 ## Releases
 
-Releases are automated with [release-please](https://github.com/googleapis/release-please). Every push to `main` updates a release PR with the next version, worked out from the conventional commit messages, and the matching version in `package.json` and `package-lock.json`. Merging that PR tags `vX.Y.Z` and publishes a GitHub Release with the notes.
+Releases are automated with [release-please](https://github.com/googleapis/release-please). Every push to `main` updates a release PR with the next version, worked out from the conventional commit messages, and the matching version in `package.json` and `package-lock.json`. Merging that PR tags `vX.Y.Z`, publishes a GitHub Release with the notes and the `.vsix` attached, and publishes the extension to the Visual Studio Marketplace with [Trusted Publishing](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) (OpenID Connect, no stored token) from the `marketplace` environment.
 
 ## Icon
 

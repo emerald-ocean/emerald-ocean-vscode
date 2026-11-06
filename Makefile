@@ -4,7 +4,7 @@ VSCE := node_modules/.bin/vsce
 THEME := themes/emerald-ocean-color-theme.json
 TEMPLATE := templates/emerald-ocean-color-theme.json.tmpl
 
-.PHONY: generate lint package
+.PHONY: generate lint package publish
 
 generate:
 	mkdir -p themes
@@ -20,3 +20,6 @@ node_modules: package-lock.json
 package: generate node_modules
 	mkdir -p dist
 	$(VSCE) package --no-dependencies --out dist/
+
+publish: package
+	$(VSCE) publish --oidc --packagePath dist/*.vsix
