@@ -19,6 +19,15 @@ Then pick **Emerald Ocean** under *Preferences: Color Theme*.
 
 The theme enables semantic highlighting, so language servers that provide semantic tokens (gopls, TypeScript, rust-analyzer) colour type definitions, struct fields, parameters and constants the same way as the Neovim theme.
 
+## Development
+
+The theme in `themes/` is generated at build time from `templates/` with the colours of [emerald-ocean/palette](https://github.com/emerald-ocean/palette) and is not committed. The palette version is pinned in the `Makefile`.
+
+```sh
+make generate      # generate themes/emerald-ocean-color-theme.json
+make package       # build dist/emerald-ocean-<version>.vsix
+```
+
 ## Icon
 
 The icon is derived from ["Vortex" by Matt Hardy](https://unsplash.com/photos/zJ-Cj3nT6EU) on Unsplash, used under the Unsplash License.
