@@ -1,4 +1,5 @@
 .jj/**
+.github/**
 .gitignore
 Makefile
 dist/**

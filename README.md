@@ -25,8 +25,10 @@ The theme in `themes/` is generated at build time from `templates/` with the col
 
 ```sh
 make generate      # generate themes/emerald-ocean-color-theme.json
-make package       # build dist/emerald-ocean-<version>.vsix
+make lint package  # validate and build dist/emerald-ocean-<version>.vsix
 ```
+
+CI runs the same targets and keeps the packaged `.vsix` as a build artifact.
 
 ## Icon
 

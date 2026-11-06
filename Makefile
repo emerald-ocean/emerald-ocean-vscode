@@ -4,11 +4,14 @@ VSCE := node_modules/.bin/vsce
 THEME := themes/emerald-ocean-color-theme.json
 TEMPLATE := templates/emerald-ocean-color-theme.json.tmpl
 
-.PHONY: generate package
+.PHONY: generate lint package
 
 generate:
 	mkdir -p themes
 	$(EMERALD_GEN) generate -template $(TEMPLATE) -out $(THEME)
+
+lint: generate
+	jq empty package.json $(THEME)
 
 node_modules: package-lock.json
 	npm ci --ignore-scripts
