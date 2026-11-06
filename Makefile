@@ -1,4 +1,4 @@
-PALETTE_VERSION := v0.1.0
+PALETTE_VERSION := v0.1.1
 EMERALD_GEN := go run github.com/emerald-ocean/palette/cmd/emerald-gen@$(PALETTE_VERSION)
 VSCE := node_modules/.bin/vsce
 THEME := themes/emerald-ocean-color-theme.json
