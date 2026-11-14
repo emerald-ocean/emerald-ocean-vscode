@@ -275,19 +275,35 @@
       }
     },
     {
-      "name": "Keywords and builtin types",
+      "name": "Keywords",
       "scope": [
         "keyword",
         "keyword.control",
         "storage",
-        "storage.type",
         "storage.modifier",
-        "support.type.primitive",
-        "support.type.builtin",
         "variable.language"
       ],
       "settings": {
         "foreground": "{{.emerald4}}"
+      }
+    },
+    {
+      "name": "Declaration keywords and builtin types",
+      "scope": [
+        "keyword.function",
+        "keyword.var",
+        "keyword.const",
+        "keyword.type",
+        "keyword.struct",
+        "keyword.interface",
+        "keyword.package",
+        "keyword.control.import",
+        "storage.type",
+        "support.type.primitive",
+        "support.type.builtin"
+      ],
+      "settings": {
+        "foreground": "{{.emerald3}}"
       }
     },
     {
@@ -524,7 +540,7 @@
     "interface": "{{.lagoon4}}",
     "enum": "{{.lagoon4}}",
     "typeParameter": "{{.lagoon4}}",
-    "type.defaultLibrary": "{{.emerald4}}",
+    "type.defaultLibrary": "{{.emerald3}}",
     "parameter": {
       "foreground": "{{.foam5}}",
       "italic": true
