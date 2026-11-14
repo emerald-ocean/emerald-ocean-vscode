@@ -1,6 +1,6 @@
 # Emerald Ocean for VS Code
 
-A dark theme coloured like the ocean when green beats blue: a green-black base taken from a breaking emerald wave, emerald keywords and functions, lagoon types, sea-blue packages and fields, foam-white values, and bioluminescence that only appears where you are working: a blue glow for the cursor and pink jelly for the matching bracket and references.
+A dark theme coloured like the ocean when green beats blue: a green-black base taken from a breaking emerald wave, emerald keywords and functions, lagoon types, sea-blue packages and fields, foam-white values, glow-blue strings with foam-white quotes and emerald escapes, and bioluminescence where you are working: a blue glow for the cursor and pink jelly for the matching bracket and references.
 
 The colours come from [emerald-ocean/palette](https://github.com/emerald-ocean/palette) and match [emerald-ocean.nvim](https://github.com/emerald-ocean/emerald-ocean.nvim).
 
