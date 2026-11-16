@@ -340,6 +340,7 @@
     {
       "name": "Declaration keywords and builtin types",
       "scope": [
+        "meta.method.declaration storage.type.property",
         "keyword.function",
         "keyword.var",
         "keyword.const",
@@ -361,6 +362,7 @@
     {
       "name": "Operators and punctuation",
       "scope": [
+        "storage.type.function.arrow",
         "keyword.operator",
         "punctuation",
         "meta.brace",
@@ -388,6 +390,8 @@
     {
       "name": "Types",
       "scope": [
+        "new.expr entity.name.function",
+        "meta.method.declaration > storage.type",
         "entity.name.type",
         "entity.name.class",
         "entity.name.interface",
@@ -424,6 +428,7 @@
     {
       "name": "Fields and properties",
       "scope": [
+        "variable.object.property",
         "variable.other.property",
         "meta.object-literal.key",
         "variable.other.member",
