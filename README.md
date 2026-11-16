@@ -10,7 +10,7 @@ From a packaged extension (requires Node.js):
 
 ```sh
 make package
-code --install-extension dist/emerald-ocean-0.1.0.vsix
+code --install-extension dist/emerald-ocean-*.vsix
 ```
 
 Then pick **Emerald Ocean** under *Preferences: Color Theme*.
