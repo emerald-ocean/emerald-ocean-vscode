@@ -27,7 +27,10 @@ The theme in `themes/` is generated at build time from `templates/` with the col
 make generate      # generate themes/emerald-ocean-color-theme.json
 make lint package  # validate and build dist/emerald-ocean-<version>.vsix
 make update-palette VERSION=vX.Y.Z  # move to a new palette release
+make scopes        # render samples/ through VS Code's TextMate engine into dist/scopes.html and dist/scopes.tsv
 ```
+
+`make scopes` uses the same `vscode-textmate` and `vscode-oniguruma` versions as VS Code, and grammars downloaded from the pinned VS Code release and checked against `grammars.sha256`. The `.tsv` lists every token with its colour and scopes, so it can be compared with Neovim.
 
 CI runs the same targets and keeps the packaged `.vsix` as a build artifact.
 

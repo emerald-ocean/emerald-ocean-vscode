@@ -1,0 +1,29 @@
+{
+  "name": "tide-forecast",
+  "version": "1.4.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --outfile=dist/app.js",
+    "test": "node --test"
+  },
+  "stations": [
+    {
+      "id": "abc-01",
+      "name": "North Harbour \"Pier 3\"",
+      "location": { "lat": 51.4545, "lon": -2.5879 },
+      "active": true,
+      "offset_min": -12,
+      "tags": ["harbour", "tidal"],
+      "notes": null
+    },
+    {
+      "id": "xyz-42",
+      "name": "South Reef",
+      "location": { "lat": 50.1234, "lon": -5.0678 },
+      "active": false,
+      "offset_min": 7,
+      "tags": [],
+      "notes": "Gauge under repair until March."
+    }
+  ]
+}
