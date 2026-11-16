@@ -19,6 +19,15 @@ Then pick **Emerald Ocean** under *Preferences: Color Theme*.
 
 The theme enables semantic highlighting, so language servers that provide semantic tokens (gopls, TypeScript, rust-analyzer) colour type definitions, struct fields, parameters and constants the same way as the Neovim theme.
 
+For Go, gopls sends semantic tokens only when asked. Without them, VS Code's Go grammar cannot tell a package from a type (`time` in `time.Time`), a field from a variable (`s.store`), or a field definition from a composite literal key. Turn them on, but leave keywords and strings to the theme so declaration keywords and string quotes keep their colours:
+
+```json
+"gopls": {
+  "ui.semanticTokens": true,
+  "ui.semanticTokenTypes": { "keyword": false, "string": false }
+}
+```
+
 ## Development
 
 The theme in `themes/` is generated at build time from `templates/` with the colours of [emerald-ocean/palette](https://github.com/emerald-ocean/palette) and is not committed. The palette version is pinned in the `Makefile`.
