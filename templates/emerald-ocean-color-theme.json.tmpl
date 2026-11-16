@@ -268,10 +268,31 @@
     {
       "name": "String quotes",
       "scope": [
-        "punctuation.definition.string"
+        "punctuation.definition.string",
+        "punctuation.support.type.property-name"
       ],
       "settings": {
         "foreground": "{{.foam5}}"
+      }
+    },
+    {
+      "name": "JSON and YAML keys",
+      "scope": [
+        "support.type.property-name.json",
+        "entity.name.tag.yaml"
+      ],
+      "settings": {
+        "foreground": "{{.emerald3}}"
+      }
+    },
+    {
+      "name": "YAML anchors and aliases",
+      "scope": [
+        "variable.other.anchor.yaml",
+        "variable.other.alias.yaml"
+      ],
+      "settings": {
+        "foreground": "{{.emerald4}}"
       }
     },
     {
@@ -345,7 +366,8 @@
         "meta.brace",
         "punctuation.separator",
         "punctuation.terminator",
-        "punctuation.accessor"
+        "punctuation.accessor",
+        "keyword.control.flow.block-scalar"
       ],
       "settings": {
         "foreground": "{{.foam3}}"
