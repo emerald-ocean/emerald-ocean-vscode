@@ -1,0 +1,17 @@
+{
+  "scopeName": "struct-tags.injection",
+  "injectionSelector": "L:string.quoted.raw.go",
+  "patterns": [
+    {
+      "match": "[^\\s:\"`]+:(\")[^\"]*(\")",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.string.begin.go"
+        },
+        "2": {
+          "name": "punctuation.definition.string.end.go"
+        }
+      }
+    }
+  ]
+}

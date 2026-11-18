@@ -34,6 +34,46 @@
         "uiTheme": "vs-dark",
         "path": "./themes/emerald-ocean-color-theme.json"
       }
+    ],
+    "grammars": [
+      {
+        "scopeName": "json-in-strings.injection",
+        "path": "./syntaxes/json-in-strings.tmLanguage.json",
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.ts",
+          "source.tsx"
+        ]
+      },
+      {
+        "scopeName": "format-specifiers.injection",
+        "path": "./syntaxes/format-specifiers.tmLanguage.json",
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.ts",
+          "source.tsx"
+        ]
+      },
+      {
+        "scopeName": "struct-tags.injection",
+        "path": "./syntaxes/struct-tags.tmLanguage.json",
+        "injectTo": [
+          "source.go"
+        ]
+      },
+      {
+        "scopeName": "route-placeholders.injection",
+        "path": "./syntaxes/route-placeholders.tmLanguage.json",
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.ts",
+          "source.tsx",
+          "source.go"
+        ]
+      }
     ]
   },
   "devDependencies": {

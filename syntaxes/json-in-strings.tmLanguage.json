@@ -1,0 +1,46 @@
+{
+  "scopeName": "json-in-strings.injection",
+  "injectionSelector": "L:source.js -string -comment, L:source.ts -string -comment, L:source.tsx -string -comment",
+  "patterns": [
+    {
+      "begin": "'(?=[ \\t]*[\\[{].*[\\]}][ \\t]*')",
+      "beginCaptures": {
+        "0": {
+          "name": "string.quoted.single punctuation.definition.string.begin"
+        }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": {
+          "name": "string.quoted.single punctuation.definition.string.end"
+        }
+      },
+      "contentName": "meta.embedded.json",
+      "patterns": [
+        {
+          "include": "source.json"
+        }
+      ]
+    },
+    {
+      "begin": "`(?=[ \\t]*[\\[{])",
+      "beginCaptures": {
+        "0": {
+          "name": "string.template punctuation.definition.string.template.begin"
+        }
+      },
+      "end": "`",
+      "endCaptures": {
+        "0": {
+          "name": "string.template punctuation.definition.string.template.end"
+        }
+      },
+      "contentName": "meta.embedded.json",
+      "patterns": [
+        {
+          "include": "source.json"
+        }
+      ]
+    }
+  ]
+}

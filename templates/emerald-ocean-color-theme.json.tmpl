@@ -286,6 +286,45 @@
       }
     },
     {
+      "name": "Route placeholder markers",
+      "scope": [
+        "punctuation.definition.placeholder.begin.route",
+        "punctuation.definition.placeholder.end.route"
+      ],
+      "settings": {
+        "foreground": "{{.emerald4}}"
+      }
+    },
+    {
+      "name": "Route placeholder names",
+      "scope": "variable.other.placeholder.route",
+      "settings": {
+        "foreground": "{{.emerald3}}",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "JavaScript and TypeScript booleans",
+      "scope": [
+        "constant.language.boolean.true.js",
+        "constant.language.boolean.false.js",
+        "constant.language.boolean.true.ts",
+        "constant.language.boolean.false.ts",
+        "constant.language.boolean.true.tsx",
+        "constant.language.boolean.false.tsx"
+      ],
+      "settings": {
+        "foreground": "{{.emerald4}}"
+      }
+    },
+    {
+      "name": "JSON booleans and null",
+      "scope": "constant.language.json",
+      "settings": {
+        "foreground": "{{.emerald4}}"
+      }
+    },
+    {
       "name": "YAML anchors and aliases",
       "scope": [
         "variable.other.anchor.yaml",
@@ -315,7 +354,6 @@
         "constant.language",
         "constant.other",
         "variable.other.constant",
-        "variable.other.enummember",
         "support.constant"
       ],
       "settings": {
@@ -325,6 +363,8 @@
     {
       "name": "Keywords",
       "scope": [
+        "storage.type.type",
+        "constant.language.import-export-all",
         "keyword",
         "keyword.control",
         "keyword.operator.new",
@@ -340,6 +380,9 @@
     {
       "name": "Declaration keywords and builtin types",
       "scope": [
+        "meta.import keyword.control.as",
+        "meta.export keyword.control.as",
+        "keyword.operator.expression.import",
         "meta.method.declaration storage.type.property",
         "keyword.function",
         "keyword.var",
@@ -416,6 +459,20 @@
       }
     },
     {
+      "name": "JavaScript and TypeScript imported names",
+      "scope": [
+        "meta.import.js variable.other.readwrite.js",
+        "meta.import.js variable.other.readwrite.alias.js",
+        "meta.import.ts variable.other.readwrite.ts",
+        "meta.import.ts variable.other.readwrite.alias.ts",
+        "meta.import.tsx variable.other.readwrite.tsx",
+        "meta.import.tsx variable.other.readwrite.alias.tsx"
+      ],
+      "settings": {
+        "foreground": "{{.sea4}}"
+      }
+    },
+    {
       "name": "Parameters",
       "scope": [
         "variable.parameter"
@@ -428,6 +485,7 @@
     {
       "name": "Fields and properties",
       "scope": [
+        "variable.other.enummember",
         "variable.object.property",
         "variable.other.property",
         "meta.object-literal.key",
@@ -478,6 +536,18 @@
       ],
       "settings": {
         "foreground": "{{.anemone4}}"
+      }
+    },
+    {
+      "name": "JSX tags",
+      "scope": [
+        "entity.name.tag.js",
+        "entity.name.tag.tsx",
+        "support.class.component.js",
+        "support.class.component.tsx"
+      ],
+      "settings": {
+        "foreground": "{{.emerald4}}"
       }
     },
     {
@@ -610,11 +680,44 @@
       "foreground": "{{.foam5}}",
       "italic": true
     },
+    "parameter:javascript": {
+      "foreground": "{{.foam5}}",
+      "italic": false
+    },
+    "parameter.declaration:javascript": {
+      "foreground": "{{.foam5}}",
+      "italic": true
+    },
+    "parameter:javascriptreact": {
+      "foreground": "{{.foam5}}",
+      "italic": false
+    },
+    "parameter.declaration:javascriptreact": {
+      "foreground": "{{.foam5}}",
+      "italic": true
+    },
+    "parameter:typescript": {
+      "foreground": "{{.foam5}}",
+      "italic": false
+    },
+    "parameter.declaration:typescript": {
+      "foreground": "{{.foam5}}",
+      "italic": true
+    },
+    "parameter:typescriptreact": {
+      "foreground": "{{.foam5}}",
+      "italic": false
+    },
+    "parameter.declaration:typescriptreact": {
+      "foreground": "{{.foam5}}",
+      "italic": true
+    },
     "variable": "{{.foam5}}",
+    "variable.readonly:go": "{{.biolume3}}",
+    "variable.readonly.defaultLibrary:go": "{{.foam5}}",
     "property": "{{.sea5}}",
-    "property.declaration": "{{.foam5}}",
     "property.definition": "{{.foam5}}",
-    "enumMember": "{{.foam5}}",
+    "enumMember": "{{.sea5}}",
     "function": "{{.emerald4}}",
     "method": "{{.emerald4}}",
     "macro": "{{.anemone4}}",

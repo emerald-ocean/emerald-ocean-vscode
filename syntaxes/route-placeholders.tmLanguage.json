@@ -1,0 +1,45 @@
+{
+  "scopeName": "route-placeholders.injection",
+  "injectionSelector": "L:string.quoted.single.js, L:string.quoted.double.js, L:string.template.js -meta.template.expression, L:string.quoted.single.ts, L:string.quoted.double.ts, L:string.template.ts -meta.template.expression, L:string.quoted.single.tsx, L:string.quoted.double.tsx, L:string.template.tsx -meta.template.expression, L:string.quoted.double.go, L:string.quoted.raw.go",
+  "patterns": [
+    {
+      "match": "(?<=/)(\\$\\()([A-Za-z_]\\w*)(\\))",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.placeholder.begin.route"
+        },
+        "2": {
+          "name": "variable.other.placeholder.route"
+        },
+        "3": {
+          "name": "punctuation.definition.placeholder.end.route"
+        }
+      }
+    },
+    {
+      "match": "(?<=/)(\\{)([A-Za-z_]\\w*)((?:\\.\\.\\.|:[^}]*)?\\})",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.placeholder.begin.route"
+        },
+        "2": {
+          "name": "variable.other.placeholder.route"
+        },
+        "3": {
+          "name": "punctuation.definition.placeholder.end.route"
+        }
+      }
+    },
+    {
+      "match": "(?<=/)([:$])([A-Za-z_]\\w*)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.placeholder.begin.route"
+        },
+        "2": {
+          "name": "variable.other.placeholder.route"
+        }
+      }
+    }
+  ]
+}

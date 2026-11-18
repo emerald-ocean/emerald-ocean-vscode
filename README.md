@@ -28,6 +28,10 @@ For Go, gopls sends semantic tokens only when asked. Without them, VS Code's Go 
 }
 ```
 
+## Inside strings
+
+The extension adds small injection grammars, so JSON in JavaScript and TypeScript strings, format specifiers (`%s`), route placeholders (`/:id`, `/$id`, `/$(id)`, `/{id}`) in JavaScript, TypeScript and Go, and the quotes in Go struct tags are coloured like in Neovim.
+
 ## Development
 
 The theme in `themes/` is generated at build time from `templates/` with the colours of [emerald-ocean/palette](https://github.com/emerald-ocean/palette) and is not committed. The palette version is pinned in the `Makefile`.

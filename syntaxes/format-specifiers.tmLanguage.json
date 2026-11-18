@@ -1,0 +1,13 @@
+{
+  "scopeName": "format-specifiers.injection",
+  "injectionSelector": "L:string.quoted.single.js, L:string.quoted.double.js, L:string.template.js -meta.template.expression, L:string.quoted.single.ts, L:string.quoted.double.ts, L:string.template.ts -meta.template.expression, L:string.quoted.single.tsx, L:string.quoted.double.tsx, L:string.template.tsx -meta.template.expression",
+  "patterns": [
+    {
+      "match": "%%"
+    },
+    {
+      "match": "%(?:\\d+\\$)?[-+ #0']*(?:\\d+|\\*)?(?:\\.(?:\\d+|\\*)?)?(?:hh|h|ll|l|j|z|t|L|w|I64|I32|I)?[a-zA-Z]",
+      "name": "constant.other.placeholder"
+    }
+  ]
+}
