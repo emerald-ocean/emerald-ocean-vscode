@@ -6,7 +6,3 @@ dist/**
 node_modules/**
 package-lock.json
 templates/**
-grammars/**
-grammars.sha256
-samples/**
-scripts/**

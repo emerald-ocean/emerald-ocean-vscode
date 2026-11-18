@@ -37,8 +37,6 @@
     ]
   },
   "devDependencies": {
-    "@vscode/vsce": "4.1.0",
-    "vscode-oniguruma": "1.7.0",
-    "vscode-textmate": "9.3.2"
+    "@vscode/vsce": "4.1.0"
   }
 }
